@@ -40,7 +40,7 @@
     console.log(`jsPsych Version ${jsPsych.version()}`) // JavaScriptコンソールに、現在お使いのjsPsychのバージョンが表示されます。
 
     const experiment = []; // この配列に、プラグインの情報をpush していきます。
-    const myrandID = jsPsych.randomization.randomID(8); // 実験ごとに参加者にランダムに割り当てる文字列
+    const myrandID = jsPsych.randomization.randomID(8); // 調査ごとに参加者にランダムに割り当てる文字列
 
     // 画像の事前読み込み。プラグインによっては自動読み込みをしてくれますが、常に手動で読み込みほうが安全です。
     const images = [
@@ -76,9 +76,9 @@
     const enter_fullscreen = {
         type: jsPsychFullscreen,
         fullscreen_mode: true,
-        message: `<div class="instruction"><p>実験に関係のないアプリケーションを可能な限り終了してください。</p>
+        message: `<div class="instruction"><p>調査に関係のないアプリケーションを可能な限り終了してください。</p>
         <p>また、ウェブブラウザで複数のタブを開いているときには、それらも閉じてください。</p>
-        <p>下のボタンを押すとフルスクリーンモードに変更します。実験を中断するときにはESCキーを押してください。</p></div>`,
+        <p>下のボタンを押すとフルスクリーンモードに変更します。調査を中断するためにフルスクリーンを解除したいときにはESCキーを押してください。</p></div>`,
         button_label: '次へ',
     }
     experiment.push(enter_fullscreen)
@@ -94,7 +94,7 @@
     const gender_age_form = {
         type: jsPsychSurveyHtmlForm,
         preamble: `<h2>あなたの性別と年齢を回答してください</h2>`,
-        html: `<input type="radio" name="gender"" value="1" required>女性
+        html: `<input type="radio" name="gender" value="1" required>女性
             <input type="radio" name="gender" value="2">男性
             <input type="radio" name="gender" value="3">その他・無回答
             <div> </div>
@@ -184,7 +184,7 @@
 
     const end_msg = {
         type: jsPsychHtmlKeyboardResponse,
-        stimulus: `<p>お疲れ様でした。以上で実験を終了いたします。</p>`,
+        stimulus: `<p>お疲れ様でした。以上で調査を終了いたします。</p>`,
         data:{phase:5},
         choices: "NO_KEYS"
     }
