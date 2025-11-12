@@ -131,7 +131,7 @@
             resp_label.forEach(question_label => {
                 const resp = data.response[question_label];
                 if (typeof resp !== 'undefined' && (resp !== "")){
-                    const kaito = Number(resp) + 1; // 未回答ならマイナス１。 回答を数字に変換し、開始番号を１とする。
+                    const kaito = Number(resp) + 1; // 未回答なら記録しない。 回答を数字に変換し、開始番号を１とする。
                     likert_resp[question_label] = kaito;
                 }
             })
