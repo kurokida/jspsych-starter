@@ -129,8 +129,9 @@
             const likert_resp = {};
             const resp_label = Object.keys(data.response);
             resp_label.forEach(question_label => {
-                if (typeof data.response[question_label] !== 'undefined'){
-                    const kaito = Number(data.response[question_label]) + 1; // 回答を数字に変換し、開始番号を１とする。
+                const resp = data.response[question_label];
+                if (typeof resp !== 'undefined' && (resp !== "")){
+                    const kaito = Number(resp) + 1; // 未回答ならマイナス１。 回答を数字に変換し、開始番号を１とする。
                     likert_resp[question_label] = kaito;
                 }
             })
