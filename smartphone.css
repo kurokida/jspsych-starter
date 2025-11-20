@@ -1,0 +1,120 @@
+/* CSS before the @media rule applies to all devices: PC, Mac, and smartphones. */
+
+/* Disable Pull-to-Refresh */
+html, body {
+    overscroll-behavior: none;
+}
+
+.red {
+    color: red;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.instruction {
+    max-width: 500px;
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+/* Following settings will apply to smartphones. Note that we consider a width of 480 pixels or less to be a smartphone. */
+@media screen and (max-width: 480px){ 
+    /* fonts and type */
+    .jspsych-display-element {
+        font-family: "Open Sans", "Arial", sans-serif;
+        font-size: 20px;
+        line-height: 1.6em;
+    }
+
+    .jspsych-content-wrapper{
+        width: auto;
+    }
+
+    #jspsych-content {
+        margin: 30px;
+        /* max-width: 400px; This might be useful. */
+    }
+
+    .instruction{
+        max-width: 300px;
+        text-align: left;
+    }
+
+    img {
+        max-width: 300px !important;
+        height: auto !important;
+    }
+
+    canvas {
+        max-width: 300px !important;
+        height: auto !important;
+    }
+
+    select{
+        font-size: 20px;
+    }
+
+    button{
+        font-size: 20px;
+    }
+
+    video{
+        max-width: 300px !important;
+    }
+
+    .jspsych-btn{
+        font-size: 20px;
+    }
+
+    /* We have to use “!important” to raise the priority.
+    Font size of prompt */
+    .jspsych-survey-likert-statement{ 
+        font-size: 20px !important; 
+    }
+
+    /* We have to use “!important” to raise the priority.
+    Note that the scale_width property is disabled on smartphones. */
+    .jspsych-survey-likert-opts{
+        max-width: 300px !important;
+    }
+
+    /* Font size of the letters used on the scale */
+    .jspsych-survey-likert-opt-label{
+        font-size: 15px;
+    }
+
+    .jspsych-html-slider-response-container{
+        max-width: 300px !important;
+    }
+
+    .jspsych-video-slider-response-container{
+        max-width: 300px !important;
+    }
+
+    .jspsych-image-slider-response-container{
+        max-width: 300px !important;
+    }
+
+    .jspsych-audio-slider-response-container{
+        max-width: 300px !important;
+    }
+
+    .jspsych-canvas-slider-response-container{
+        max-width: 300px !important;
+    }
+
+    input[type="radio"] {
+        transform: scale(1.5);
+    }
+
+}
+  

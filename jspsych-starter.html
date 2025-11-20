@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type"  content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <script src="./dist/jspsych.js"></script>
     <script src="./dist/plugin-html-button-response.js"></script>
     <script src="./dist/plugin-preload.js"></script>
@@ -12,18 +13,12 @@
     <script src="./dist/plugin-html-keyboard-response.js"></script>
     <script src="./myFunc.js"></script>
     <link rel="stylesheet" href="./dist/jspsych.css"></link>
+    <link rel="stylesheet" href="./smartphone.css"></link>
     <style>
-        .red{
-            color: red;
-        }
         .bold{
             font-weight: bold;
         }
-        .instruction{
-          max-width: 500px;
-          text-align: left;
-        }
-      </style>
+    </style>
 </head>
 <body></body>
 <script>
@@ -108,7 +103,7 @@
     }
     experiment.push(gender_age_form);
 
-    const scale = ["1<br>まったくそう思わない", "2<br>あまりそう思わない", "3<br>どちらでもない", "4<br>ややそう思う", "5<br>非常にそう思う"];
+    const scale = ["<p>1<br>まったくそう思わない</p>", "<p>2<br>あまりそう思わない</p>", "<p>3<br>どちらでもない</p>", "<p>4<br>ややそう思う</p>", "<p>5<br>非常にそう思う</p>"];
     const likert_trial = {
         type: jsPsychSurveyLikert,
         preamble: jsPsych.timelineVariable('image_tag'),
